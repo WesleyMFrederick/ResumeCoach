@@ -29,12 +29,34 @@ class LoadJobDescription(Node):
 
     def post(self, shared, prep_res, exec_res):
         shared["job_description"] = exec_res
-        
+
         # Simplify ID by just using a timestamp
         timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
         shared["timestamp"] = timestamp
-        
+
         print(f"Generated timestamp: {timestamp}")
+
+        # Get the job description file name
+        job_description_file = shared.get("job_description_file", "data/job_descriptions/job_description.txt")
+        job_name = os.path.splitext(os.path.basename(job_description_file))[0]
+
+        # Create checklist file if it doesn't exist
+        checklist_file = f"data/description_analyses/{job_name}_checklist.txt"
+        shared["checklist_file"] = checklist_file
+
+        if not os.path.exists(checklist_file):
+            with open(checklist_file, "w") as f:
+                f.write("[ ] Job description loaded\n")
+                f.write("[ ] Qualities extracted\n")
+                f.write("[ ] Sample resume generated\n")
+
+            print(f"Created checklist file: {checklist_file}")
+        else:
+            print(f"Checklist file already exists: {checklist_file}")
+        
+        # Store the job name in shared
+        shared["job_name"] = job_name
+        
         return "default"
 
 
@@ -92,7 +114,7 @@ class ValidateOrRetryYAML(Node):
     def exec_fallback(self, shared, prep_res, exc):
         print(f"YAML validation failed: {exc}")
         # Return None to indicate failure, which will be handled in post()
-        return None, shared["timestamp"]
+        return None, shared["timestamp"], exc
     
     def _clean_string_for_filename(self, text):
         """
@@ -129,8 +151,23 @@ class ValidateOrRetryYAML(Node):
         # Simplified ID format: timestamp_company_position
         unique_id = f"{timestamp}_{company_clean}_{job_clean}"
         shared["job_unique_id"] = unique_id
-        
+
         print(f"Created human-readable unique ID: {unique_id}")
+
+        # Update the checklist file
+        checklist_file = shared["checklist_file"]
+        if os.path.exists(checklist_file):
+            with open(checklist_file, "r") as f:
+                checklist = f.readlines()
+        else:
+            checklist = []
+
+        # Mark the "Qualities extracted" step as completed
+        checklist[1] = "[X] Qualities extracted\n"
+
+        with open(checklist_file, "w") as f:
+            f.writelines(checklist)
+
         return "default"
 
 
@@ -185,12 +222,66 @@ class SaveYAMLFiles(Node):
         return output_files
 
     def post(self, shared, prep_res, exec_res):
-        for file_path in exec_res:
-            file_name = os.path.basename(file_path)
-            print(f"Saved {file_name}")
-        
         # Store the path to both files in shared memory if needed later
         shared["output_files"] = exec_res
+        return "default"
+
+
+class GenerateSampleResume(Node):
+    def prep(self, shared):
+        # Get the job metadata and top 10 qualities from shared
+        job_metadata = shared.get("combined_yaml", {}).get("metadata", {})
+        job_qualities = shared.get("combined_yaml", {}).get("qualities", [])
+
+        # Get the job unique ID
+        job_unique_id = shared.get("job_unique_id")
+
+        # Load the prompt template
+        prompt_template_file = "data/prompt_templates/prompt-job-description-sample-resume-template.md"
+        prompt_template = read_file(prompt_template_file)
+
+        # Load the resume template
+        resume_template_file = "data/resume_templates/resume_template_text.txt"
+        resume_template = read_file(resume_template_file)
+
+        return job_metadata, job_qualities, prompt_template, resume_template, job_unique_id
+
+    def exec(self, inputs):
+        job_metadata, job_qualities, prompt_template, resume_template, job_unique_id = inputs
+
+        # Inject the job metadata and top 10 qualities into the prompt template
+        final_prompt = prompt_template.replace("{jobMetadata}", str(job_metadata))
+        final_prompt = final_prompt.replace("{jobQualities}", str(job_qualities))
+        final_prompt = prompt_template.replace("{resumeTemplate}", resume_template)
+
+        # Call the LLM to generate the sample resume
+        sample_resume = call_llm(final_prompt, model="gpt-4.5-preview")
+
+        return sample_resume, job_unique_id
+
+    def post(self, shared, prep_res, exec_res):
+        sample_resume, job_unique_id = exec_res
+
+        # Save the sample resume to a file
+        sample_resume_file = f"data/description_analyses/{job_unique_id}_sample-resume.txt"
+        write_file(sample_resume_file, sample_resume)
+
+        print(f"Saved sample resume to {sample_resume_file}")
+
+        # Update the checklist file
+        checklist_file = f"data/description_analyses/{job_unique_id.split('_')[0]}_checklist.txt"
+        if os.path.exists(checklist_file):
+            with open(checklist_file, "r") as f:
+                checklist = f.readlines()
+        else:
+            checklist = []
+        
+        # Mark the "Sample resume generated" step as completed
+        checklist.append("[X] Sample resume generated\n")
+        
+        with open(checklist_file, "w") as f:
+            f.writelines(checklist)
+
         return "end"
 
 
@@ -201,9 +292,10 @@ inject_jd = InjectJobDescription()
 call = CallLLM()
 validate_yaml = ValidateOrRetryYAML()
 save_yaml = SaveYAMLFiles()
+generate_resume = GenerateSampleResume()
 
 # Define flow connections
-load_jd >> load_prompt >> inject_jd >> call >> validate_yaml >> save_yaml
+load_jd >> load_prompt >> inject_jd >> call >> validate_yaml >> save_yaml >> generate_resume
 
 # Add the retry path
 validate_yaml - "retry_llm" >> call

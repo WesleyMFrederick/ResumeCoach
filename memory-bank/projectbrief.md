@@ -27,3 +27,4 @@ Product managers with 10+ years of experience who have some technical coding bac
   - Anthropic Claude
   - Google Gemini
 - **Development Environment:** VS Studio Code with Cline AI
+- **Implementation Plan:** [Detailed development roadmap](./plans/implement-plan.md)

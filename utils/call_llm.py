@@ -4,23 +4,23 @@ from dotenv import load_dotenv  # Import dotenv for loading environment variable
 from openai import OpenAI
 from utils.file_io import write_file  # Import the write_file utility
 
-def call_llm(prompt):
+def call_llm(prompt, model="gpt-4o"):
     # Load environment variables from .env file
     load_dotenv()
-    
+
     # Get API key from environment variables
     api_key = os.environ.get('OPENAI_API_KEY')
-    
+
     if not api_key:
         raise ValueError("OpenAI API key not found in environment variables")
-    
+
     client = OpenAI(api_key=api_key)
     r = client.chat.completions.create(
-        model="gpt-4o",
+        model=model,
         messages=[{"role": "user", "content": prompt}]
     )
     response = r.choices[0].message.content
-    
+
     # Get the current date and time for the log filenames
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     

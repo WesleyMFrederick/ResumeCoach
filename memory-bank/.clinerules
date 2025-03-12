@@ -63,6 +63,25 @@ This file captures important patterns, preferences, and project intelligence tha
 - Generate unique IDs for output files
 - Create both machine and human-readable output formats
 
+## New Implementation Patterns
+
+### Semantic Matching
+- Use LLM embedding analysis for experience-quality matching
+
+### Weighted Scoring
+- Combine LLM analysis with numerical scoring (0-5 scale)
+
+### Evidence Boost
+- Apply multiplier to scores with strong quantifiable outcomes
+
+## New Implementation Patterns
+
+### Model Selection
+- Use a `model` parameter in the `call_llm` function to select different LLMs for different tasks.
+
+### Failsafe Mechanism
+- Create a checklist file to track progress and allow resuming interrupted workflows.
+
 ## Known Challenges
 
 ### LLM Output Consistency
@@ -80,3 +99,9 @@ This file captures important patterns, preferences, and project intelligence tha
 - Started with job description analysis as the foundation
 - Next phase focuses on resume parsing and experience extraction
 - Final phase will implement matching and generation capabilities
+
+## Testing Notes
+
+- All nodes should have unit tests to ensure they are working correctly.
+- Integration tests should be used to test the entire flow.
+- Mock the `call_llm` function in integration tests to avoid using OpenAI credits.

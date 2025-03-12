@@ -45,8 +45,8 @@ Status: Feature 1.1 Completed
 ### 3.2 Feature 1.2: Ideal Candidate Resume Generation
 * **User Story:** "As a Product Manager user, I want the LLM to generate a sample resume that the perfect candidate would submit so I can use it as a reference for my own resume tailoring." (3.2.1)
 * **Implementation Details:** (3.2.2)
-  * Create a prompt that uses the job description and extracted qualities (3.2.2.1)
-  * Generate a sample resume with properly formatted sections and bullet points (3.2.2.2)
+  * Create a prompt that uses the job description metadata and Top 10 Qualities (3.2.2.1)
+  * Generate a sample text resume with properly formatted sections and bullet points (3.2.2.2)
   * Include examples of how the perfect candidate would demonstrate each of the top qualities (3.2.2.3)
   * Store the sample resume for comparison and reference in later steps (3.2.2.4)
 
@@ -122,6 +122,29 @@ Status: In Progress (Feature 2.1 started)
 ### 7.2 Feature 5.2: Additional MVP Elements
 * **User Story:** "As a PM user, I want to incorporate any remaining MVP plan items that don't neatly fit elsewhere so I can benefit from ongoing enhancements." (7.2.1)
 
+## Next Steps
+
+1.  Modify `tests/test_integration.py` to update the mock `call_llm` function to return a valid YAML string that includes the required "metadata" and "qualities" sections, and that can be parsed by the `validate_job_yaml` function.
+2.  Modify `flows/job_flow.py` to pass the `exc` argument to the `exec_fallback` method.
+3.  Create unit tests for the remaining nodes:
+    *   LoadPromptTemplate
+    *   InjectJobDescription
+    *   CallLLM
+    *   ValidateOrRetryYAML
+    *   SaveYAMLFiles
+    *   GenerateSampleResume
+4.  Implement an automated integration test:
+    *   Create a new test file (e.g., `tests/test_integration.py`).
+    *   This test will:
+        *   Create a mock job description file.
+        *   Run the entire flow using the mock job description file.
+        *   Assert that the correct files are created and that the checklist file contains the correct information.
+5.  Mock the `call_llm` function to avoid using OpenAI credits:
+    *   Use `unittest.mock.patch` to mock the `call_llm` function in the integration test.
+    *   The mock function will return a predefined string.
+6.  Modify `LoadJobDescription` to prevent duplicate checklist files:
+    *   Modify the `LoadJobDescription` node to check if the checklist file already exists before creating it.
+7.  Run all unit tests and the integration test.
 
 # Plan Artifact
 https://claude.site/artifacts/98ccac4d-8c1c-4777-843e-0b738a46c2ca

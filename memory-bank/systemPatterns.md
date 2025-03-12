@@ -112,6 +112,10 @@ The current implementation focuses on job description analysis, with planned ext
 2. **Experience Matching Engine**
    - Compare job requirements to candidate experience
    - Score and rank relevance of experiences
+   - Implement combined matching approach:
+    * **Semantic Matching**: Use LLM to analyze semantic relationships between work experiences and job qualities
+    * **Quality-to-Experience Matrix**: Score each experience (0-5) against each quality
+    * **Evidence Weighting**: Boost scores for experiences with strong quantifiable outcomes
    - Potential implementation using RAG pattern for contextual matching
 
 3. **Resume Generation Components**

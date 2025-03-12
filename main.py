@@ -11,9 +11,6 @@ def main():
     output_files = shared.get("output_files", [])
     if output_files:
         print("\nJob processing completed successfully!")
-        print("Generated output files:")
-        for file_path in output_files:
-            print(f"- {file_path}")
 
 if __name__ == "__main__":
     main()

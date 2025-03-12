@@ -1,0 +1,3 @@
+[ ] Job description loaded
+[ ] Qualities extracted
+[ ] Sample resume generated

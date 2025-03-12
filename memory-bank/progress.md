@@ -32,10 +32,13 @@ pie title Project Completion
 
 ## What's In Progress
 
-### 🔄 Resume Parsing
-- Design work started for resume text ingestion
-- Planning structured format for work experience
-- Researching optimal resume section categorization
+### 🔄 User Experience Processing
+- LLM-Based Editing for Punch & Clarity
+
+### 🔄 Job Description Analysis
+- Ideal Candidate Resume Generation
+- Adding Unit Tests for all Nodes
+- Implementing Integration Tests
 
 ### 🔄 Documentation
 - Initial project documentation created

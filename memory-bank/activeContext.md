@@ -23,6 +23,10 @@ The ResumeCoach project is currently in the **Job Description Analysis Phase**. 
 - Added error handling with retry logic for LLM calls
 - Implemented human-readable and machine-readable output formats
 - Restructured data directory with organized subdirectories
+- Implemented the ability to select different models for different flows
+- Implemented the Ideal Candidate Resume Generation node
+- Implemented a failsafe mechanism to track progress and allow resuming interrupted workflows
+- Added unit tests for the new node and the model selection functionality
 
 ### Recent Technical Decisions
 - Selected YAML as the structured data format for job qualities and metadata
@@ -36,23 +40,6 @@ The ResumeCoach project is currently in the **Job Description Analysis Phase**. 
   - job_descriptions/ for job listings
   - Plus additional directories for future features
 
-## Next Development Priorities
-
-### Immediate Tasks
-1. **Resume Parsing Implementation**
-   - Create a flow for ingesting and structuring resume text
-   - Develop components for extracting experience sections
-   - Implement categorization of skills and qualifications
-
-2. **Experience Matching Engine**
-   - Design algorithms to match job requirements with candidate experiences
-   - Develop scoring system for experience relevance
-   - Create relevance ranking for resume sections
-
-3. **Resume Generation Pipeline**
-   - Implement bullet point optimization for relevant experiences
-   - Develop resume assembly component
-   - Create formatting and output options
 
 ### Technical Enhancements
 - Refine error handling and recovery mechanisms
@@ -75,3 +62,27 @@ The ResumeCoach project is currently in the **Job Description Analysis Phase**. 
 - Investigating best practices for resume optimization
 - Exploring transfer learning techniques for experience matching
 - Evaluating different prompt strategies for tailored results
+
+## Next Steps
+
+1.  Modify `tests/test_integration.py` to update the mock `call_llm` function to return a valid YAML string that includes the required "metadata" and "qualities" sections, and that can be parsed by the `validate_job_yaml` function.
+2.  Modify `flows/job_flow.py` to pass the `exc` argument to the `exec_fallback` method.
+3.  Create unit tests for the remaining nodes:
+    *   LoadPromptTemplate
+    *   InjectJobDescription
+    *   CallLLM
+    *   ValidateOrRetryYAML
+    *   SaveYAMLFiles
+    *   GenerateSampleResume
+4.  Implement an automated integration test:
+    *   Create a new test file (e.g., `tests/test_integration.py`).
+    *   This test will:
+        *   Create a mock job description file.
+        *   Run the entire flow using the mock job description file.
+        *   Assert that the correct files are created and that the checklist file contains the correct information.
+5.  Mock the `call_llm` function to avoid using OpenAI credits:
+    *   Use `unittest.mock.patch` to mock the `call_llm` function in the integration test.
+    *   The mock function will return a predefined string.
+6.  Modify `LoadJobDescription` to prevent duplicate checklist files:
+    *   Modify the `LoadJobDescription` node to check if the checklist file already exists before creating it.
+7.  Run all unit tests and the integration test.
