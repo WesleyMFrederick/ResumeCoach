@@ -1,0 +1,112 @@
+WESLEY M. FREDERICK
+Principal Product Manager | Data-Driven Strategy | Cross-Functional Leadership
+
+wmfrederick@gmail.com
+(415) 710-1003
+linkedin.com/in/wesleyfrederick/
+San Francisco, California
+
+Summary
+======
+Product Manager with over a decade of experience driving data-driven product strategies and delivering impactful solutions in consumer and government domains. Successfully led a payments platform redesign, achieving 200% YoY user adoption growth and reducing processing times from two weeks to one day. Spearheaded the digitization of a $500M cap-and-trade marketplace, combining technical innovation with customer-centric features. Managed product roadmaps that drove yearly user growth from 886K to 2.5M. Adept at cross-functional collaboration and leveraging insights to align product strategies with business objectives.
+
+
+Experience
+======
+Senior Product Manager
+Bay Area Air Quality Management District
+04/2018 - 12/2024
+San Francisco, CA
+Regional Government Agency for Nine Bay Area Counties
+ - Drove the online payment customer adoption strategy, achieving a 200% YoY increase in online revenue.
+ - Delivered a check and credit card payment platform, scaling online revenue potential 10x from $4M to $50M.
+ - Led the digitization of a $500M cap-and-trade marketplace, integrating technical innovations to serve over 15,000 companies across nine counties.
+ - Analyzed databases, customer feedback, and infrastructure to identify and mitigate risks, improving the payment platform's reliability and user experience.
+ - Built consensus among stakeholders, including executives, legal, and finance teams, to align priorities and add the payment platform to the District-wide roadmap.
+ - Optimized processes by integrating advanced tools like ChatGPT and Power BI, reducing mean time to resolution (MTTR) from two weeks to one day.
+
+Product Manager
+Metric Insights
+11/2016 - 03/2018
+San Francisco, CA
+Enterprise B2B, SaaS Business Intelligence
+ - Guided a 10-person cross-functional team, including sales, marketing, and development, to deliver a multi-tenant SaaS incident management feature.
+ - Translated customer requirements into clear product specifications to ensure alignment across engineering, design, and sales teams, and to fulfill key client business goals.
+
+Product Manager
+GoodBed
+03/2016 - 05/2018
+San Francisco, CA
+Consumer Recommendation & Review Platform
+ - Owned the product roadmap, successfully launching 14 features that increased yearly users from 886K to 2.5M.
+ - Defined and shipped a machine learning search engine, growing user product ratings from 10 per month to over 25,000 per month..
+ - Worked with executives and developers to create a comprehensive data pipeline that updated 40,000+ data points weekly, improving product insights and personalization.
+
+Founder
+CrowdSwell
+08/2009 - 2011
+San Francisco, CA
+SMB Marketing Platform
+ - Built and led a five-person team, delivering a functional prototype in under two months.
+ - Conducted product experiments, growing CTR to over 25% and landing page conversions to over 50%.
+
+
+Achievements
+======
+Transformed Online Payments
+Launched a payment platform at BAAQMD, driving a 200% YoY increase in online payment adoption and improving the customer experience.
+
+Modernized a $500M Marketplace
+Directed the digitization of a $500M emissions offsets marketplace, serving 15K companies across nine counties and ensuring compliance with regulatory standards.
+
+Grew Annual Users from 750K to 2.5M
+Leveraged data and customer insights at GoodBed to execute end-to-end product launches, helping grow yearly users by 300% and significantly enhancing engagement.
+
+Streamlined Development Operations
+Introduced KPIs and BI tools at BAAQMD, reducing MTTR from two weeks to one day.
+
+
+Skills
+======
+ - Product Strategy & Roadmaps
+ - Customer-Centered Design
+
+ - SQL
+ - Business Intelligence (Power BI
+ - Looker)
+ - R
+ - Dashboards & Reporting
+ - Metrics & KPI Analysis
+
+ - Python
+ - C#
+ - HTML
+ - Javascript
+ - Linux
+
+ - Defining Pain Points
+ - Prioritizing
+ - Iterative Development
+
+ - Verbal & Written Communication
+ - Leadership
+
+
+Experience
+======
+Software Developer
+Maxim Online, Ron Jon Surfparks, PacketVideo
+05/2002 - 06/2009
+New York, NY
+ - Created custom LAMP frameworks, reducing development time and improving bidding efficiency by 30%.
+ - Developed tools for Surfparks that helped secure $12M in funding by identifying 3,000 potential customers.
+ - Built front-end and interactive content using HTML, JavaScript, and SQL, growing Maxim Magazine Online to the #2 general interest men's destination.
+
+
+Education
+======
+Bachelor of Arts in Music
+University of California, Santa Cruz
+01/2010 - 01/2014
+ - Graduated with Honors
+

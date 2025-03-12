@@ -1,0 +1,316 @@
+- company:
+    name: Bay Area Air Quality Management District (BAAQMD)
+    additional_names:
+      - BAAQMD
+      - the District
+      - Bay Area Air District
+      - BAAD
+    about: Regional Government Agency for Nine Bay Area Counties
+    industry: Environmental Regulation & Enforcement
+    position: Senior Product Manager
+    start_date: 2019-04-01
+    end_date: 2024-12-31
+    location: San Francisco, CA
+    projects:
+      - name: No Net Increase (NNI)
+        additional_names:
+          - NNI
+          - Emissions Banking Program
+        situation:
+          - I was given the responsibility of converting the legacy NNI software applications and data to the modern permitting system.
+          - The NNI Emissions Banking Program allows for the deposit of air pollutant emission reduction credits (ERCs). Companies can receive credits by introducing new emissions controls, such as upgrading or replacing old equipment, shutting down equipment, upgrading processes and materials, adopting stricter operating guidelines and adding control equipment to existing sources. These new controls must go beyond the requirements of current regulations and must be real, permanent, quantifiable, and enforceable.
+          - Banked credits are permanent and can be used to offset emissions increases from new, permitted projects and traded or sold to other companies for their use.
+          - Reductions of criteria pollutants can be banked.
+        objectives:
+          - Convert legacy Databank data into New Permitting/Production System (NPS) data schema.
+          - Convert legacy Databank applications into new workflows for the New Production System.
+        obstacles:
+          -
+        actions:
+          - Interviewed subject matter experts (SME) on NNI workflows, goals, and objectives.
+          - Reviewed written air quality programs, rules, regulations, policies, and procedures.
+          - Analyzed legacy Databank data schema to identify gaps in existing system and workflows.
+          - Developed and iterated on Power BI reports to create an interactive dashboard that could quickly identify, summarize, and provide details on the data used for the legacy Databank data schema.
+          - Created NNI database schema for New Permitting/Production (NPS).
+          - Worked with data team to implement new NNI database schema.
+          - Recognized the risks associated with scarce SME and software development resources and prioritized the NNI roadmap accordingly.
+          - Developed and iterated on Power BI reports to create an interactive report on New Permitting System, creating a backup method to access data in the case application and UI developers were not available to convert legacy applications and UI.
+          - Led members of data and software development team to implement NPS versions of legacy Databank data and applications.
+          - Organized efforts of Engineering SMEs to clarify and prioritize NPS versions of legacy Databank applications.
+          - Used AI to increase the speed and accuracy of converting legacy database schemas into NPS SQL statements.
+        results:
+          - Reduced complexity of searching for data by reducing the number of data sources from 14 tables down to two.
+          - Reduced the time needed to generate statistical summaries for aggregate, down from weeks to minutes.
+          - Identified erroneous transactions that were out of compliance with BAAQMD rules, regulations, policies, and procedures.
+          - Created four new NPS features in nine months.
+          - Automated public-facing Emissions Banking Credits workflow.
+        tools:
+          - SQL
+          - SQL Server
+          - Azure Data Studio
+          - Balsamiq Wire Frames
+          - Miro User Story Mapping
+          - Azure Dev Ops
+          - Power BI
+          - C++
+          - AI
+        skills:
+          - Data Analytics
+          - Report Building
+          - Interviewing
+          - Prioritization
+          - Prototyping
+          - Leadership
+          - Empathy
+      - name: Online Payment Portal
+        additional_names:
+          - Pay Any Invoice
+          - Online Payments
+        situation:
+          - I was given the responsibility of upgrading the District payment system.
+        objectives:
+          - Reduce the cost BAAQMD paid for crediitt card service fees.
+          - Switch customers from manual check and fax payments to online payments.
+          - Reduce the cost of processing manual check payments
+          - Reduce delays in issuing permits
+          - Reduce cost of manually resolving invoice and payment related issues
+        obstacles:
+          - UI/UX for Online Payments
+            - High friction to pay for an invoice online. Users needed to create an account before they could pay for an invoice online.
+            - Lack of information presented to users when errors occurred. Prevented users from self servicing issues and increased calls and emails to District staff.
+          - District culture of siloed divisions
+            - Invoice and payment business process were owned by six (6) different divisions. This increased the complexity of analysis.
+            - No single District employee owned invoice and payment processes. This increased the complexity and burden of stakeholder communications, alignment, and sign off.
+            - Invoice and payment business process required hand offs between divisions, but division staff only had insight into and responsibility for their portion of the process. This increased difficulty of root-cause analysis and ownership of issues & bugs.
+          - The technical systems used to generate invoices and process payments were fragmented
+            - Ten (10) different invoice types were generated across 6 different systems. This increased the complexity of comprehensive analysis.
+              - Three of the five (3 of 6) systems were legacy systems which had a lockdown on code changes. This constraint increased the complexity of implementing solutions using only modern systems.
+              - The API between the modern invoice/payment system and the financial system was not capable of handling the high transaction volume. This would break application and payment transactions. A lack of diagnostic tools increased the difficulty of tracing transaciton errors.
+            - Thirty (30) different payment scenarios existed. This increased the probability of errors, the difficulty of root-cause analysis and ownership of underlying issues, and identifying core needs and requirements.
+          - The data for the majority of invoice types and monetary value was only available on a weekly schedule. This increased the complexity of presenting the current state of an invoice for online payment by end users.
+          - Formally, my area of responsibility was upgrading the payment technology. However, to achieve the objectives, revising business process and influencing key stakeholders would be required.
+        actions:
+          - Met with Director of Information Services, Director of Finance, and Senior Finance Manager in a kick off meeting to define and align Finance's goals
+            - Reduce cost of paying credit card service fees
+            - Reduce manual processing of credit card payments via insecure fax
+            - Reduce the cost of manual processing checks
+          - Analyzed payment and invoice transactions using Excel, SQL, and Azure Data Studio
+          - Reviewed payment processor (PaymentUS) technical implementation documentation
+          - Reviewed payment processor (PaymentUS) API endpoints using Postman
+          - Reviewed industry practices and regulations for credit card and eCheck payment processing.
+          - Analyzed business processes used to issue invoices and process payments
+          - Analyzed technology and systems used to issue invoices and process payments
+          - Synthesized data gathered to identify obstacles to realizing objectives
+          - Prioritized obstacles using RICE framework (Reach/Risk, Impact, Confidence, Effort)
+          - Communicated findings of obstacles to stakeholders (Director of Information Services, Director of Finance, Senior Finance Manager)
+          - Identified other stakeholders in the District impacted by findings. (Engineering, Enforcement, Legal, Information Services divisions | Executives, Directors, Managers, Supervisors, Staff).
+          - Created wireframes using Balsamiq
+          - Gathered UI/UX feedback, consensus, and collaboration by facilitating and running iterative user testing on lo-fidelity wireframes
+          - Removed UI/UX friction points, reducing the time to pay an invoice from 15-30 minutes down to 1-3 minutes
+          - Developed and iterated Power BI reports to create interactive reports that could quickly identify, summarize, and provide invoice and payment details across disparate systems.
+          - Managed and prioritized feature roadmap
+          - Estimated project scope, features, deliverables, and delivery dates
+          - Facilitated meetings with the software development division to communicate needs and functional/technical requirements
+          - Documented development user stories using Azure Dev Ops
+          - Facilitated QA use cases and test cases using documentation in Azure Dev Ops
+          - Project managed software implementation
+          - Implemented customer self-service features that reduced the number of customer service calls and emails regarding invoices and payments.
+          - Worked with Director of Information services to influence the adoption of a monthly meeting between the Finance and Engineering divisions to proactively address shared issues and break down siloed divisions.
+          - Presented new features to stakeholders using division-wide meeting formats
+          - Monitored invoice and payment KPIs using Power BI and Google Analytics
+        results:
+          - Saved the District $120k/yr in credit card service fees
+          - Saved the District $16k/yr in costs associated with manual check processing
+          - Increased online payment transactions from 5% per year to 33% per year
+          - Increased online payment amounts from $50K per year to over $5M per year
+          - Increased availability of online payment invoices from 30% to 99%
+          - Increased the ETL of legacy invoice data from one week down to one day
+          - Reduced the number of hours spent identifying and fixing invoice and payment-related bugs from two weeks down to one day
+          - Reduced the number of customer service calls regarding failed payments
+          - Increased adoption of Power BI.
+        tools:
+          - SQL
+          - SQL Server
+          - Azure Data Studio
+          - Balsamiq Wire Frames
+          - Miro User Story Mapping
+          - Azure Dev Ops
+          - Power BI
+          - Paymentus Payment Portal
+          - C++
+          - Postman
+          - Google Analytics
+        skills:
+          - Data Analytics
+          - Report Building
+          - Interviewing
+          - Prioritization
+          - Prototyping
+          - Leadership
+          - Empathy
+          - API
+          - User Story Mapping
+          - Observation
+          - Payment Card Industry (PCI) Compliance
+      - name: Notice of Violation Dashboard & Report
+        additional_names:
+          - NOV
+          - Woodsmoke NOV Dashboard
+        situation:
+          - Notice of Violation (NOV) is the process for identifying, notifying, tracking, communicating, and prosecuting permit violations.
+          - I was given the responsibility of solving for the Notice Of Violation business process being split across multiple systems. There was need to increase visibility of NOVs nearing their statute of limitations, or that had fallen through the cracks.
+        objectives:
+          - Reduce Total NOV Mean Time To Resolution (MTTR)
+          - Reduce Legal NOV MTTR
+          - Identify bottlenecks in NOV process
+          - Increase collaboration and communication between Legal Division and Enforcement Division
+        obstacles:
+          - District culture of siloed divisions
+            - The handoff of NOVs between Legal and Enforcement created 3 to 6 months of additional resolution time due to siloed communication and visibility.
+            - The lack of a shared report between Legal and Enforcement resulted in competing priorities. This increased the MTTR and the chance NOVs would fall through the cracks, missing the 3 year window for resolution.
+          - The technical systems used to generate to generate and track NOVs were fragmented
+            - Two (2) different systems were used to track NOVs, resulting in confusion and duplication of NOV information.
+            - A single view did not exist for the NOV business process. This resulted in additional MTTR due to confusion regarding which system to look for information.
+          - The data for the legacy NOV data was only available on a weekly schedule in the new permitting system. This increased the complexity of presenting the current state of an NOV.
+          - Formally, my area of responsibility was upgrading the NOV technology. However, to achieve the objectives, revising business process and influencing key stakeholders would be required.
+        actions:
+          - Met with District lead counsel and legal staff to define and align Legal's goals
+          - Met with Legal staff to observe business process and document using User Story Mapping
+          - Analyzed NOV legacy database schemas
+          - Analyzed NOV modern database schemas
+          - Reviewed requirements documentation for legacy implementation of NOV application software
+          - Create summary statistics for existing transactions using SQL and Azure Data Studio
+          - Synthesized happy path use cases and edge cases into requirements
+          - Prioritized obstacles using RICE framework (Reach/Risk, Impact, Confidence, Effort) and Jobs-to-be-Done (JTD) frameworks.
+          - Communicated findings of obstacles to stakeholders (Lead Counsel, Legal Staff, Enforcement Managers & Staff)
+          - Developed and iterated Power BI reports to create interactive reports that could quickly aggregate, identify, and summarize all NOV transactions across disparate systems.
+          - Estimated project scope, features, deliverables, and delivery dates
+          - Facilitated meetings with the software development division to communicate needs and functional/technical requirements
+          - Documented development user stories using Azure Dev Ops
+          - Facilitated QA use cases and test cases using documentation in Azure Dev Ops
+          - Project managed software implementation
+          - Presented new features to stakeholders using division-wide meeting formats
+        results:
+          - Reduced the time to generate monthly and quarterly Board of Director reports from one week down to a few of hours.
+          - Increased the visibility and alerting for NOVs nearing their statue of limitations
+          - Decreased MTTR for NOVs from 36 months to 24 months
+        tools:
+          - SQL
+          - SQL Server
+          - Azure Data Studio
+          - Miro User Story Mapping
+          - Azure Dev Ops
+          - Power BI
+        skills:
+          - Data Analytics
+          - Report Building
+          - Interviewing
+          - Prioritization
+          - Prototyping
+          - Empathy
+          - User Story Mapping
+          - Observation
+          - Jobs To Be Done
+- company:
+    name: Metric Insights
+    about: Enterprise Business to Business (B2B), SaaS Business Intelligence
+    industry: Software As A Service (SaaS) Business Intelligence
+    position: Product Manager
+    start_date: 2016-11-01
+    end_date: 2018-04-01
+    location: San Francisco, CA
+    projects:
+      - name: Data Alerts Incident Tracking & Management
+        situation:
+          - Metric Insights had alerts on anomalous data
+          - Clients requested a feature that could assign ownership and workflow to alerts so they could be investigated and resolved
+        objectives:
+          - Launch a data alert tracking feature
+        obstacles:
+          - Not Applicable
+        actions:
+          - Interviewed CEO, Marketing, Sales, Solution Implementation, Design, and customers to understand needs
+          - Synthesized various needs into business requirement documents using Jira and Confluence
+          - Analyzed usage data using Tableau
+          - Created wireframes using Balsamiq
+          - Gathered UI/UX feedback, consensus, and collaboration by facilitating and running iterative user testing on lo-fidelity wireframes
+          - Optimized the software development sprint cycle to generate better effort and deliverable date estimates
+        results:
+          - Launched feature on time and under budget
+          - Reduced the development team agile deliverables from two weeks down to one week
+        tools:
+          - SQL
+          - Tableau
+          - Balsamiq Wire Frames
+          - Miro User Story Mapping
+          - Confluence
+          - Jira
+        skills:
+          - Data Analytics
+          - Report Building
+          - Interviewing
+          - Prioritization
+          - Prototyping
+          - Leadership
+          - Empathy
+          - Waterfall
+- company:
+    name: GoodBed
+    about: Consumer Recommendation & Review Platform
+    industry: Mattress
+    position: Product Manager
+    start_date: 2019-04-01
+    end_date: 2024-12-31
+    location: San Francisco, CA
+    projects:
+      - name: GoodBed Quiz & Data Pipeline
+        additional_names:
+          - Mattress Recommendation Engine
+        situation:
+          - Worked with CEO to develop an automated feature that gave users personalized mattress recommendations across thousands of brands/models
+        objectives:
+          - Engage users with relevant mattress search results
+          - Identify which part of the mattress shopping funnel the user was in
+          - Increase GoodBed's user review content
+          - Educate users on selecting a mattress that is perfectly suited to their individual needs
+        obstacles:
+          - Lack of development and analysis resources
+          - Lack of product, retail, price, and inventory data
+          - CEO and Software Development push back against the viability of machine learning and web scraping implementation costs
+        actions:
+          - Worked with CEO in an iterative process, from lo-fi prototyping to production releases, to define consumer needs and jobs to be done
+          - Analyzed website analytics using Google Analytics to estimate consumer needs
+          - Interviewed users and potential users in each stage of the mattress purchasing funnel
+          - Identified the resource and system gaps preventing GoodBed from meeting customer needs
+          - Prioritized obstacles using RICE framework (Reach/Risk, Impact, Confidence, Effort)
+          - Synthesized analysis and available development resources to determine optimal solutions
+          - Gathered UI/UX feedback, consensus, and collaboration by facilitating and running iterative user testing on lo-fidelity wireframes
+          - Researched machine learning techniques that could be used to solve for scarce development and content generation resources
+          - Created KNN ML prototype using Google Sheets
+          - Tested KNN ML prototype with subject matter experts and potential consumers to validate needs and solutions
+          - Created a web scraping prototype using R
+          - Communicated product context and requirements to software development team
+          - Reviewed Key Performance Indicators (KPIs) to monitor how well implemented feature was matching consumer needs
+        results:
+          - Increase annual users from 886K to 2.5M
+          - Grew user product review and ratings from 10 per month to over 25K per month
+          - Created data pipeline that Updated 40K data points  (price, product, retailers, inventory), improving product insights and personalization
+        tools:
+          - Google Sheets
+          - K-Nearest Neighbors (KNN) Unsupervised Machine Learning Algorithm
+          - Google Analytics
+          - Python
+          - R
+          - Asana
+          - Web Scraping
+        skills:
+          - Data Analytics
+          - Prioritization
+          - Prototyping
+          - Leadership
+          - Empathy
+          - Interviews
+          - Iteration
+          - Agile
+          - Jobs To be Done
+          - Machine Learning

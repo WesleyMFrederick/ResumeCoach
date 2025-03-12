@@ -1,0 +1,82 @@
+# ResumeCoach Project Intelligence
+
+This file captures important patterns, preferences, and project intelligence that will help Cline work more effectively with the ResumeCoach project.
+
+## Implementation Patterns
+
+### Workflow Structure
+- All PocketFlow workflows should follow the Node pattern with `prep()`, `exec()`, and `post()` methods
+- Use the shared dictionary pattern for state management between nodes
+- Always implement error handling with retry paths where appropriate
+- Organize flows as directed acyclic graphs with clear start and end points
+
+### Code Organization
+- Keep node implementations in the `flows/` directory
+- Place utility functions in the `utils/` directory
+- Store data files (inputs/outputs) in the `data/` directory
+
+### YAML Handling
+- Use structured YAML for all data interchange
+- Provide both machine-readable and human-readable formats
+- Validate all YAML structures using schema validation
+
+## Project Preferences
+
+### Naming Conventions
+- Use CamelCase for class names (e.g., `LoadJobDescription`)
+- Use snake_case for variables and functions (e.g., `job_description`, `parse_yaml_from_llm_output()`)
+- Use descriptive names that reflect the purpose (e.g., `ValidateOrRetryYAML`)
+
+### Documentation Standards
+- Include docstrings for all classes and non-trivial methods
+- Update Memory Bank files when implementing significant changes
+- Provide clear file and variable naming for self-documentation
+
+### Error Handling
+- Implement retry logic for external service calls (especially LLMs)
+- Use exception handling with fallback mechanisms
+- Provide clear error messages with actionable information
+
+## User Workflow Patterns
+
+### Job Description Processing
+- User provides a job description text
+- System extracts metadata and key qualities
+- Output structured in YAML format
+
+### Resume Customization (Future)
+- User provides work experience in structured format
+- User uploads current resume text
+- System generates tailored bullet points
+- System produces optimized resume text
+
+## Critical Implementation Paths
+
+### LLM Interaction
+- Use the abstracted `call_llm()` function from utils
+- Structure prompts with clear instruction and expected output format
+- Validate LLM outputs against expected schema
+- Implement retry mechanism for validation failures
+
+### File Operations
+- Use the `read_file()` and `write_file()` utilities
+- Generate unique IDs for output files
+- Create both machine and human-readable output formats
+
+## Known Challenges
+
+### LLM Output Consistency
+- LLMs may produce inconsistent formatting
+- Validation and retry logic is essential
+- Use structured examples in prompts to guide output format
+
+### Complex Job Descriptions
+- Job descriptions vary widely in structure and content
+- Prompt engineering is critical for consistent extraction
+- Edge cases may require manual intervention
+
+## Project Evolution Notes
+
+- Started with job description analysis as the foundation
+- Next phase focuses on resume parsing and experience extraction
+- Final phase will implement matching and generation capabilities
