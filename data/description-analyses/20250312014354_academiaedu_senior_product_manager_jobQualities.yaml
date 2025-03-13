@@ -1,0 +1,76 @@
+- quality: Expertise in Recommendation Systems
+  rank: 1
+  reason: |-
+    Expert knowledge in recommendation systems is central to the role, as the job revolves around optimizing and advancing these systems.
+  sentences:
+  - |-
+    You will lead a newly formed team focused on optimizing our recommendation algorithms
+  - |-
+    As a subject matter expert in ranking systems, you will bring best practices and techniques to the team
+  - |-
+    Define and navigate the explore-exploit trade-off in recommendation systems and how to balance user exploration with personalized content exploitation
+  - Educate the product organization on ranking/recommendations best practices
+  - |-
+    Strong understanding of recommendation systems, machine learning, and data science principles
+- quality: Cross-Functional Team Leadership
+  rank: 2
+  reason: |-
+    Leading and collaborating with cross-functional teams are critical for executing product strategy and ensuring alignment across different departments.
+  sentences:
+  - Lead and coordinate cross-functional teams across engineering and data
+  - |-
+    Collaborate with cross-functional teams, including data science, engineering, and UX, to enhance our recommendation system and improve the user experience.
+- quality: Product Management Experience
+  rank: 3
+  reason: |-
+    Extensive product management experience is essential for handling the complexities of launching and optimizing recommendation products.
+  sentences:
+  - 5+ years of experience in product management, preferably in edtech or media-tech
+  - |-
+    Proven track record of successfully launching and managing recommendation products
+  - Manage product lifecycle from ideation to launch and post-launch optimization
+- quality: Analytical & Problem-Solving Skills
+  rank: 4
+  reason: |-
+    Strong analytical abilities are required to solve complex challenges in recommendation systems and drive meaningful business impact.
+  sentences:
+  - Excellent analytical and problem-solving skills
+  - |-
+    Drive business impact (i.e. more engagement with research through better recommendations)
+- quality: Communication & Mentoring Skills
+  rank: 5
+  reason: |-
+    This quality is important for effectively communicating across the organization and educating team members on best practices.
+  sentences:
+  - Exceptional communication skills, both written and oral
+  - Educate the product organization on ranking/recommendations best practices
+- quality: Customer-Centric & Data-Driven Approach
+  rank: 6
+  reason: |-
+    A focus on customers and data-driven decision-making ensures that the products meet user needs and are optimized based on solid evidence.
+  sentences:
+  - Customer-centric approach with a knack for data-driven validation
+- quality: Proactive & Self-Starter
+  rank: 7
+  reason: |-
+    Being proactive is crucial for anticipating challenges and seizing opportunities, especially in a dynamic work environment.
+  sentences:
+  - Self-starter with a proactive approach to identifying and solving problems
+- quality: Business Impact Focus
+  rank: 8
+  reason: |-
+    Making a significant business impact aligns with the company's goal of enhancing engagement through improved recommendations.
+  sentences:
+  - Demonstrated ability to make a significant business impact
+- quality: Startup Experience
+  rank: 9
+  reason: |-
+    Experience in a startup environment is crucial due to the fast-paced and innovative nature of the role and company.
+  sentences:
+  - Previous startup experience is essential
+- quality: Passion for Education & Research
+  rank: 10
+  reason: |-
+    While passion for the field is important, it is ranked lower as the role is more technically and strategically demanding.
+  sentences:
+  - Passion for education and academic research

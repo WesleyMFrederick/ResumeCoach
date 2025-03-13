@@ -40,7 +40,7 @@ Status: Feature 1.1 Completed
   * Python code that takes a job description markdown file (3.1.2.1)
   * Inserts into a prompt sent to the ChatGPT 4o model (3.1.2.2)
   * Returns structured YAML data in both concise format for LLMs and human-readable format (3.1.2.3)
-  * Output includes Job Metadata and Job Top 10 Qualities with rankings and supporting sentences (3.1.2.4)
+    * Output includes Job Metadata and Job Top 10 Qualities with rankings and supporting sentences (3.1.2.4)
 
 ### 3.2 Feature 1.2: Ideal Candidate Resume Generation
 * **User Story:** "As a Product Manager user, I want the LLM to generate a sample resume that the perfect candidate would submit so I can use it as a reference for my own resume tailoring." (3.2.1)

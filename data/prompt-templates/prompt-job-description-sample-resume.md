@@ -25,17 +25,7 @@ Return the resume as properly formatted markdown text following the provided res
 - The ideal candidate should have exactly the qualifications needed - neither overqualified nor underqualified.
 - Maintain realistic career progression aligned with the seniority of the target position.
 
-## Instructions
-Using the job metadata and top qualities in the **Context Dump** below, create a sample resume for an ideal candidate who would be perfect for this position. The resume should realistically demonstrate how the candidate has developed and applied each of the top 10 qualities throughout their career. 
 
-For this {jobPositionTitle} role at {companyName}, craft a resume that includes:
-1. A compelling summary highlighting the ranked #1 quality and relevant experience
-2. 3-4 previous roles with responsibilities and achievements that clearly demonstrate the top qualities
-3. Specific, quantifiable achievements from work experience aligned with the top qualities
-4. A skills section organized by relevant technical and soft skill categories
-5. An education section with appropriate degrees for this career path
-
-Format the final resume following the template structure, replacing all placeholder text with content tailored to this specific role.
 
 ## Context Dump
 
@@ -213,3 +203,13 @@ Education
  - [Note 3]
 ```
 
+Using the job metadata and top qualities from above, create a sample resume for an ideal candidate who would be perfect for this position. The resume should realistically demonstrate how the candidate has developed and applied each of the top 10 qualities throughout their career. 
+
+For this {jobPositionTitle} role at {companyName}, craft a resume that includes:
+1. A compelling summary highlighting the ranked #1 quality and relevant experience
+2. 3-4 previous roles with responsibilities and achievements that clearly demonstrate the top qualities
+3. Specific, quantifiable achievements from work experience aligned with the top qualities
+4. A skills section organized by relevant technical and soft skill categories
+5. An education section with appropriate degrees for this career path
+
+Format the final resume following the template structure, replacing all placeholder text with content tailored to this specific role.

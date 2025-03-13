@@ -1,4 +1,4 @@
-from flows.job_flow import flow
+from flows.job-flow import flow
 
 def main():
     shared = {

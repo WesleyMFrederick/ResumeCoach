@@ -64,25 +64,26 @@ The ResumeCoach project is currently in the **Job Description Analysis Phase**. 
 - Evaluating different prompt strategies for tailored results
 
 ## Next Steps
-
-1.  Modify `tests/test_integration.py` to update the mock `call_llm` function to return a valid YAML string that includes the required "metadata" and "qualities" sections, and that can be parsed by the `validate_job_yaml` function.
-2.  Modify `flows/job_flow.py` to pass the `exc` argument to the `exec_fallback` method.
-3.  Create unit tests for the remaining nodes:
+1. Modify call to LLM model to include System Message.
+    - Break templates into system and user messages
+2.  Modify `tests/test_integration.py` to update the mock `call_llm` function to return a valid YAML string that includes the required "metadata" and "qualities" sections, and that can be parsed by the `validate_job_yaml` function.
+3.  Modify `flows/job_flow.py` to pass the `exc` argument to the `exec_fallback` method.
+4.  Create unit tests for the remaining nodes:
     *   LoadPromptTemplate
     *   InjectJobDescription
     *   CallLLM
     *   ValidateOrRetryYAML
     *   SaveYAMLFiles
     *   GenerateSampleResume
-4.  Implement an automated integration test:
+5.  Implement an automated integration test:
     *   Create a new test file (e.g., `tests/test_integration.py`).
     *   This test will:
         *   Create a mock job description file.
         *   Run the entire flow using the mock job description file.
         *   Assert that the correct files are created and that the checklist file contains the correct information.
-5.  Mock the `call_llm` function to avoid using OpenAI credits:
+6.  Mock the `call_llm` function to avoid using OpenAI credits:
     *   Use `unittest.mock.patch` to mock the `call_llm` function in the integration test.
     *   The mock function will return a predefined string.
-6.  Modify `LoadJobDescription` to prevent duplicate checklist files:
+7.  Modify `LoadJobDescription` to prevent duplicate checklist files:
     *   Modify the `LoadJobDescription` node to check if the checklist file already exists before creating it.
-7.  Run all unit tests and the integration test.
+8.  Run all unit tests and the integration test.
