@@ -99,6 +99,11 @@ This file captures important patterns, preferences, and project intelligence tha
 - Transition between states must follow the checklists in `/transition`
 - Always update next-steps-index.md when changing project states
 
+### Task Update Protocol
+- Mark tasks as complete immediately after execution using [x] syntax
+- Update todo-list.md before moving to the next task
+- This ensures session continuity if interrupted
+
 ### Project Creation
 - Use template.md as the starting point for new projects
 - Assign sequential project IDs (NNN format)
