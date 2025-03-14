@@ -22,9 +22,9 @@ Each project contains:
 
 ## Transitioning Projects
 Follow checklists in `/transition` when:
-- Pausing: Move from `/active` to `/paused`
-- Activating: Move from `/paused` to `/active`
-- Completing: Move from `/active` to `/completed`
+- Pausing: Move from `/active` to `/paused`, following the pausing checklist
+- Activating: Move from `/paused` to `/active`, following the activation checklist
+- Completing: Move from `/active` to `/completed`, following the completion checklist
 
 ## Maintenance Guidelines
 - Update timestamps when modifying files

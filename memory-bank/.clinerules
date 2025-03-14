@@ -23,9 +23,10 @@ This file captures important patterns, preferences, and project intelligence tha
 ## Project Preferences
 
 ### Naming Conventions
-- Use CamelCase for class names (e.g., `LoadJobDescription`)
+- Use snake_case for class names (e.g., `load_job_description`)
 - Use snake_case for variables and functions (e.g., `job_description`, `parse_yaml_from_llm_output()`)
-- Use descriptive names that reflect the purpose (e.g., `ValidateOrRetryYAML`)
+- Use descriptive names that reflect the purpose (e.g., `validate_or_retry_yaml`)
+- All files should use snake_case (e.g. `job_flow.py`)
 
 ### Documentation Standards
 - Include docstrings for all classes and non-trivial methods
@@ -81,6 +82,32 @@ This file captures important patterns, preferences, and project intelligence tha
 
 ### Failsafe Mechanism
 - Create a checklist file to track progress and allow resuming interrupted workflows.
+
+## Next Steps Management System
+
+### Structure and Organization
+- Follow the comprehensive guidelines in `memory-bank/next-steps/README.md`
+- Projects use numbered format (NNN-project-name) and always contain:
+  - implementation-plan.md - Detailed design document
+  - todo-list.md - Tasks with checkbox status
+  - status.md - Current state and context
+
+### Project States and Transitions
+- Active projects in `/active` directory are currently being worked on
+- Paused projects in `/paused` directory are temporarily suspended
+- Completed projects in `/completed` are finished
+- Transition between states must follow the checklists in `/transition`
+- Always update next-steps-index.md when changing project states
+
+### Project Creation
+- Use template.md as the starting point for new projects
+- Assign sequential project IDs (NNN format)
+- Document dependencies between projects in next-steps-index.md
+
+### Integration with Memory Bank
+- Keep Next Steps system synchronized with activeContext.md
+- Reference active projects in the "Next Steps" section of activeContext.md
+- Ensure project status aligns with progress.md tracking
 
 ## Known Challenges
 

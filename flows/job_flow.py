@@ -1,14 +1,14 @@
 from pocketflow import Node, Flow
-from utils.file-io import read_file, write_file;
-from utils.call_llm import call_llm;
-from utils.yaml_helpers import format_yaml_with_markdown, format_yaml_readable;
-from utils.job_description_schema import parse_yaml_from_llm_output, validate_job_yaml;
+from utils.file_io import read_file, write_file
+from utils.call_llm import call_llm
+from utils.yaml_helpers import format_yaml_with_markdown, format_yaml_readable
+from utils.job_description_schema import parse_yaml_from_llm_output, validate_job_yaml
 import os
 import datetime
 
 class LoadJobDescription(Node):
     def prep(self, shared):
-        return shared.get("job_description_file", "data/job-descriptions/job_description.txt")
+        return shared.get("job_description_file", "data/job_descriptions/job_description.txt")
 
     def exec(self, filepath):
         return read_file(filepath)
@@ -37,11 +37,11 @@ class LoadJobDescription(Node):
         print(f"Generated timestamp: {timestamp}")
 
         # Get the job description file name
-        job_description_file = shared.get("job_description_file", "data/job-descriptions/job_description.txt")
+        job_description_file = shared.get("job_description_file", "data/job_descriptions/job_description.txt")
         job_name = os.path.splitext(os.path.basename(job_description_file))[0]
 
         # Create checklist file if it doesn't exist
-        checklist_file = f"data/description-analyses/{job_name}_checklist.txt"
+        checklist_file = f"data/description_analyses/{job_name}_checklist.txt"
         shared["checklist_file"] = checklist_file
 
         if not os.path.exists(checklist_file):
@@ -62,7 +62,7 @@ class LoadJobDescription(Node):
 
 class LoadPromptTemplate(Node):
     def prep(self, shared):
-        return shared.get("prompt_template_file", "data/prompt-templates/JobDescriptionTop10Attributes_prompt.md")
+        return shared.get("prompt_template_file", "data/prompt_templates/JobDescriptionTop10Attributes_prompt.md")
 
     def exec(self, filepath):
         return read_file(filepath)
@@ -177,12 +177,12 @@ class SaveYAMLFiles(Node):
         unique_id = shared.get("job_unique_id", "unknown")
         
         # Create the output filenames with the human-readable unique ID
-        qualities_file = f"data/description-analyses/{unique_id}_jobQualities.yaml"
-        metadata_file = f"data/description-analyses/{unique_id}_jobMetadata.yaml"
+        qualities_file = f"data/description_analyses/{unique_id}_jobQualities.yaml"
+        metadata_file = f"data/description_analyses/{unique_id}_jobMetadata.yaml"
         
         # Add filenames for human-readable versions
-        readable_qualities_file = f"data/description-analyses/{unique_id}_jobQualities_readable.yaml"
-        readable_metadata_file = f"data/description-analyses/{unique_id}_jobMetadata_readable.yaml"
+        readable_qualities_file = f"data/description_analyses/{unique_id}_jobQualities_readable.yaml"
+        readable_metadata_file = f"data/description_analyses/{unique_id}_jobMetadata_readable.yaml"
         
         return (qualities_file, metadata_file, 
                 readable_qualities_file, readable_metadata_file,
@@ -237,11 +237,11 @@ class GenerateSampleResume(Node):
         job_unique_id = shared.get("job_unique_id")
 
         # Load the prompt template
-        prompt_template_file = "data/prompt-templates/prompt-job-description-sample-resume-template.md"
+        prompt_template_file = "data/prompt_templates/prompt-job-description-sample-resume-template.md"
         prompt_template = read_file(prompt_template_file)
 
         # Load the resume template
-        resume_template_file = "data/resume-templates/resume_template_text.txt"
+        resume_template_file = "data/resume_templates/resume_template_text.txt"
         resume_template = read_file(resume_template_file)
 
         return job_metadata, job_qualities, prompt_template, resume_template, job_unique_id
@@ -263,13 +263,13 @@ class GenerateSampleResume(Node):
         sample_resume, job_unique_id = exec_res
 
         # Save the sample resume to a file
-        sample_resume_file = f"data/description-analyses/{job_unique_id}_sample-resume.txt"
+        sample_resume_file = f"data/description_analyses/{job_unique_id}_sample-resume.txt"
         write_file(sample_resume_file, sample_resume)
 
         print(f"Saved sample resume to {sample_resume_file}")
 
         # Update the checklist file
-        checklist_file = f"data/description-analyses/{job_unique_id.split('_')[0]}_checklist.txt"
+        checklist_file = f"data/description_analyses/{job_unique_id.split('_')[0]}_checklist.txt"
         if os.path.exists(checklist_file):
             with open(checklist_file, "r") as f:
                 checklist = f.readlines()

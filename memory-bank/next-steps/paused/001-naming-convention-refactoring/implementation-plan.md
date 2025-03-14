@@ -1,63 +1,43 @@
 # Implementation Plan for Naming Convention Refactoring
 
-After analyzing the ResumeCoach codebase, I've identified numerous inconsistencies with the new style guide. Here's my proposed implementation plan:
+After analyzing the ResumeCoach codebase and considering Python's import system limitations, we're revising our approach to maintain underscore naming conventions throughout the codebase.
 
 ## Phase 1: Preparation and Documentation
 
-1. **Create a refactoring branch** - Work in a separate branch to avoid disrupting the main codebase
-2. **Document current state** - Catalog all files, classes, functions, and variables that need renaming
-3. **Set up test cases** - Ensure we have ways to verify functionality after refactoring
+1. **Create a refactoring branch** - Work in a separate branch to avoid disrupting the main codebase ✓
+2. **Document current state** - Catalog all files, classes, functions, and variables ✓
+3. **Set up test cases** - Ensure we have ways to verify functionality after refactoring ✓
+4. **Update STYLE.md** - Revise to specify underscore naming convention
 
-## Phase 2: Directory and File Renaming
+## Phase 2: Directory and File Verification
 
-1. **Rename directories**:
-   - `data/job_descriptions` → `data/job-descriptions`
-   - `data/description_analyses` → `data/description-analyses`
-   - `data/prompt_templates` → `data/prompt-templates`
-   - `data/resume_templates` → `data/resume-templates`
-   - `data/tailored_resumes` → `data/tailored-resumes`
-   - `data/tailored_work_experience` → `data/tailored-work-experience`
-   - `data/user_files` → `data/user-files`
+1. **Verify directory naming**:
+   - Ensure all directories follow underscore convention
+   - Identify any directories using hyphens that need renaming
+   - Most directories like `data/job_descriptions` already follow correct convention
 
-2. **Rename Python files**:
-   - `flow.py` remains (single word)
-   - `main.py` remains (single word)
-   - `flows/job_flow.py` → `flows/job-flow.py`
-   - `utils/all_code.py` → `utils/all-code.py`
-   - `utils/call_llm.py` → `utils/call-llm.py`
-   - `utils/file_io.py` → `utils/file-io.py`
-   - `utils/job_description_schema.py` → `utils/job-description-schema.py`
-   - `utils/yaml_helpers.py` → `utils/yaml-helpers.py`
+2. **Verify Python file naming**:
+   - Most Python files already follow underscore convention
+   - Identify any files using hyphens that need renaming
+   - Ensure consistent naming across the codebase
 
-## Phase 3: Code Content Refactoring
+## Phase 3: Code Content Standardization
 
-1. **Class renaming**:
-   - `LoadJobDescription` → `load-job-description-node`
-   - `LoadPromptTemplate` → `load-prompt-template-node`
-   - `InjectJobDescription` → `inject-job-description-node`
-   - `CallLLM` → `call-llm-node`
-   - `ValidateOrRetryYAML` → `validate-or-retry-yaml-node`
-   - `SaveYAMLFiles` → `save-yaml-files-node`
-   - `GenerateSampleResume` → `generate-sample-resume-node`
-   - `AnswerNode` → `answer-node`
+1. **Class naming standardization**:
+   - Use lowercase underscore format: `load_job_description_node`
+   - Standardize node naming with appropriate suffixes
 
-2. **Function renaming**:
-   - `_clean_string_for_filename` → `clean-string-for-filename`
-   - Methods like `prep`, `exec`, `post`, `exec_fallback` should remain as is since they're predefined by the framework
+2. **Function naming standardization**:
+   - Ensure underscore convention: `clean_string_for_filename`
+   - Methods like `prep`, `exec`, `post`, `exec_fallback` remain as is
 
-3. **Variable renaming**:
-   - `job_description` → `job-description`
-   - `job_description_file` → `job-description-file`
-   - `checklist_file` → `checklist-file`
-   - `job_name` → `job-name`
-   - `prompt_template` → `prompt-template`
-   - `final_prompt` → `final-prompt`
-   - `raw_llm_output` → `raw-llm-output`
-   - Boolean variables to use appropriate prefixes: `is-valid`, `has-metadata`
+3. **Variable naming standardization**:
+   - Maintain underscore convention: `job_description`, `job_description_file`
+   - Boolean variables use appropriate prefixes: `is_valid`, `has_metadata`
 
-4. **Update imports and references**:
-   - Fix all import statements to reflect new file names
-   - Update all references to renamed files, classes, and functions
+4. **Update any non-compliant references**:
+   - Ensure all references follow the underscore convention
+   - Maintain compatible imports throughout the codebase
 
 ## Phase 4: Testing and Validation
 

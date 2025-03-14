@@ -1,13 +1,13 @@
 # Naming Convention Catalog
 
-## Directories (to rename)
-- `data/job_descriptions` --> `data/job-descriptions`
-- `data/description_analyses` --> `data/description-analyses`
-- `data/prompt_templates` --> `data/prompt-templates`
-- `data/resume_templates` --> `data/resume-templates`
-- `data/tailored_resumes` --> `data/tailored-resumes`
-- `data/tailored_work_experience` --> `data/tailored-work-experience`
-- `data/user_files` --> `data/user-files`
+## Directories (properly named with underscores)
+- `data/job_descriptions` 
+- `data/description_analyses`
+- `data/prompt_templates`
+- `data/resume_templates`
+- `data/tailored_resumes`
+- `data/tailored_work_experience`
+- `data/user_files`
 
 ## Other Directories
 - `flows`
@@ -19,13 +19,13 @@
 - `tests`
 - `utils`
 
-## Files (to rename)
-- `flows/job_flow.py` --> `flows/job-flow.py`
-- `utils/all_code.py` --> `utils/all-code.py`
-- `utils/call_llm.py` --> `utils/call-llm.py`
-- `utils/file_io.py` --> `utils/file-io.py`
-- `utils/job_description_schema.py` --> `utils/job-description-schema.py`
-- `utils/yaml_helpers.py` --> `utils/yaml-helpers.py`
+## Files (properly named with underscores)
+- `flows/job_flow.py`
+- `utils/all_code.py`
+- `utils/call_llm.py`
+- `utils/file_io.py`
+- `utils/job_description_schema.py`
+- `utils/yaml_helpers.py`
 
 ## Other Files
 - `flow.py`
@@ -57,34 +57,9 @@
 - `data/user_files/job_description_qualifications.yaml`
 - `data/user_files/Resume.txt`
 - `data/user_files/wmf_experience.yaml`
-- `docs/all_code.md`
-- `docs/design.md`
-- `docs/PocketFlow/PocketFlow.md`
-- `docs/PocketFlow/SETUP.md`
-- `docs/PocketFlow/docs/_config.yml`
-- `docs/PocketFlow/docs/agent.md`
-- `docs/PocketFlow/docs/apps.md`
-- `docs/PocketFlow/docs/async.md`
-- `docs/PocketFlow/docs/batch.md`
-- `docs/PocketFlow/docs/communication.md`
-- `docs/PocketFlow/docs/core_abstraction.md`
-- `docs/PocketFlow/docs/decomp.md`
-- `docs/PocketFlow/docs/essay.md`
-- `docs/PocketFlow/docs/flow.md`
-- `docs/PocketFlow/docs/guide.md`
-- `docs/PocketFlow/docs/index.md`
-- `docs/PocketFlow/docs/llm.md`
-- `docs/PocketFlow/docs/mapreduce.md`
-- `docs/PocketFlow/docs/memory.md`
-- `docs/PocketFlow/docs/multi_agent.md`
-- `docs/PocketFlow/docs/node.md`
-- `docs/PocketFlow/docs/paradigm.md`
-- `docs/PocketFlow/docs/parallel.md`
-- `docs/PocketFlow/docs/preparation.md`
-- `docs/PocketFlow/docs/rag.md`
-- `docs/PocketFlow/docs/structure.md`
-- `docs/PocketFlow/docs/tool.md`
-- `docs/PocketFlow/docs/viz.md`
+
+## Exempt Files and Directories
+- All files in `docs/` directory (exempted from naming convention rules)
 
 ## flows/job_flow.py
 ### Classes

@@ -15,24 +15,21 @@
 - [X] create-test-script for basic functionality
 - [X] document-test-cases for core workflows
 
-## rename-directories
-- [X] rename-data-job-descriptions
-- [X] rename-data-description-analyses
-- [X] rename-data-prompt-templates
-- [X] rename-data-resume-templates
-- [X] rename-data-tailored-resumes
-- [X] rename-data-tailored-work-experience
-- [X] rename-data-user-files
-- [X] update-git-tracking for renamed directories
+## style-guide-update
+- [X] create-style-guide-update-document
+- [ ] update-STYLE.md to use underscores
+- [ ] identify-hyphenated-files for conversion
+- [ ] verify-naming-conventions align with Python standards
 
-## rename-files
-- [X] rename-flows-job-flow
-- [X] rename-utils-all-code
-- [X] rename-utils-call-llm
-- [X] rename-utils-file-io
-- [X] rename-utils-job-description-schema
-- [X] rename-utils-yaml-helpers
-- [X] update-git-tracking for renamed files
+## directory-verification
+- [ ] verify-directories follow underscore convention
+- [ ] convert-any-hyphenated-directories
+- [ ] update-git-tracking for renamed directories
+
+## file-verification
+- [ ] verify-python-files follow underscore convention
+- [ ] convert-any-hyphenated-files
+- [ ] update-git-tracking for changed files
 
 ## update-imports
 - [ ] update-main-py-imports

@@ -20,16 +20,16 @@ The following elements are exempt from the style guide:
 ## Naming Conventions
 
 ### Files & Directories
-- Use lowercase hyphenated format: `job-analysis-nodes.py`
+- Use lowercase underscore format: `job_analysis_nodes.py`
 - Group related files with consistent prefixes
 - Collection files can use plural names: `templates.py`
 - Directory names should be plural when containing multiple similar items: `flows/` for multiple flows
-- Compound concept directories use hyphens: `memory-bank/`, `knowledge-base/`
+- Compound concept directories use underscores: `memory_bank/`, `knowledge_base/`
 - Word "data" can be used as both singular and plural
 
 ### Classes
-- Use lowercase hyphenated format: `validate-yaml-node`
-- Standard suffixes: `-node`, `-service`, `-model`
+- Use lowercase underscore format: `validate_yaml_node`
+- Standard suffixes: `_node`, `_service`, `_model`
 
 ### Functions
 - Actions: `verb-object`: `extract-qualities`
@@ -37,9 +37,9 @@ The following elements are exempt from the style guide:
 - Utilities: `action-detail`: `clean-filename`
 
 ### Variables
-- Basic: lowercase hyphenated: `job-description`
+- Basic: lowercase underscore: `job_description`
 - Collections: plural nouns: `qualities`, `templates`
-- Booleans: `is-*`, `has-*`: `is-valid`, `has-metadata`
+- Booleans: `is_*`, `has_*`: `is_valid`, `has_metadata`
 
 ### Output Files
 - Format: `{timestamp}-{entity-type}-{descriptor}.{extension}`
