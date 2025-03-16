@@ -7,6 +7,9 @@
 - [005] Task Update Protocol QA - Started: 2025-03-14, Activated: 2025-03-14
   - Dependencies: 003
 
+- [006] Idea Management System - Started: 2025-03-14, Activated: 2025-03-14
+  - Dependencies: None
+
 ## Paused Projects
 - [001] Naming Convention Refactoring - Started: 2025-03-01, Activated: 2025-03-13, Paused: 2025-03-13
   - Dependencies: None
@@ -23,6 +26,12 @@
 ## Completed Projects
 - [000] Organizing Next Steps Folder - Started: 2025-03-13
 
+## Ideas
+<!-- Ideas are initial concepts that need further refinement -->
+
+## Future Projects
+<!-- Future projects are refined ideas ready for implementation -->
+
 ## Dependency Graph
 ```
 000 → None
@@ -31,4 +40,5 @@
 003 → None
 004 → None
 005 → 003
+006 → None
 ```

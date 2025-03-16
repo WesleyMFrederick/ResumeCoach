@@ -1,0 +1,40 @@
+{
+    "saveEditorLayout.list": [
+        {
+            "name": "Working w/ Cline",
+            "documents": [
+                {
+                    "fsPath": "/Users/wesleyfrederick/Documents/Cline/ResumeCoach/memory-bank/plans/implement-plan.md",
+                    "column": 2,
+                    "pinned": false
+                },
+                {
+                    "fsPath": "/Users/wesleyfrederick/Documents/Cline/ResumeCoach/docs/user-project-design/llm-master-software-architect/prompts/system-prompt.md",
+                    "column": 2,
+                    "pinned": false
+                },
+                {
+                    "fsPath": "/Users/wesleyfrederick/Documents/Cline/ResumeCoach/memory-bank/next-steps/README.md",
+                    "column": 2,
+                    "pinned": false
+                },
+                {
+                    "fsPath": "/Users/wesleyfrederick/Documents/Cline/ResumeCoach/docs/user-project-design/llm-master-software-architect/prompts/.inbox/revise-role.md",
+                    "column": 2,
+                    "pinned": false
+                }
+            ],
+            "layout": {
+                "orientation": 0,
+                "groups": [
+                    {
+                        "size": 739
+                    },
+                    {
+                        "size": 887
+                    }
+                ]
+            }
+        }
+    ]
+}

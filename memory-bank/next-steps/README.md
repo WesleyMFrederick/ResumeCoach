@@ -1,7 +1,7 @@
 # Next Steps Management System
 
 ## Purpose
-This system manages project interruptions, tracks progress, and maintains continuity across work sessions.
+This system manages project interruptions, tracks progress, and maintains continuity across work sessions. It relieves the anxiety of forgetting important context by ensuring all project information is documented in a structured, accessible format.
 
 ## Project Structure
 
@@ -24,10 +24,16 @@ next-steps/
 │   └── NNN-project-name/          # Same structure as active
 ├── completed/                     # Finished projects
 │   └── NNN-project-name/          # Same structure as active
+├── ideas/                         # Captured ideas not yet ready for implementation
+│   └── idea-template.md           # Template for capturing new ideas
+├── future/                        # Refined ideas ready for future implementation
+│   └── future-template.md         # Template for future projects
 └── transition/                    # Checklists for state changes
     ├── activation-checklist.md    # Paused → Active
     ├── pausing-checklist.md       # Active → Paused
-    └── completion-checklist.md    # Active → Completed
+    ├── completion-checklist.md    # Active → Completed
+    ├── ideas-to-future-checklist.md # Ideas → Future
+    └── future-to-active-checklist.md # Future → Active
 ```
 
 ## Task Update Protocol
@@ -43,13 +49,22 @@ next-steps/
 2. Place in `/active` with format: `NNN-project-name/`
 3. Update `next-steps-index.md`
 
+## Capturing Ideas
+1. Copy `idea-template.md` to create a new idea document
+2. Fill in all relevant sections
+3. Update `next-steps-index.md` Ideas section
+4. For refinement, follow the ideas-to-future-checklist.md
+
 ## Transitioning Projects
 Follow checklists in `/transition` when:
 - Pausing: Move from `/active` to `/paused`, following the pausing checklist
 - Activating: Move from `/paused` to `/active`, following the activation checklist
 - Completing: Move from `/active` to `/completed`, following the completion checklist
+- Refining Ideas: Move from `/ideas` to `/future`, following the ideas-to-future checklist
+- Implementing Future Projects: Move from `/future` to `/active`, following the future-to-active checklist
 
 ## Maintenance Guidelines
 - Update timestamps when modifying files
 - Maintain version history in `status.md`
 - Document dependencies between projects
+- Document risks and future considerations for ideas and projects

@@ -78,6 +78,16 @@ The ResumeCoach project is currently in the **Job Description Analysis Phase**. 
   - Update Memory Bank files to align with Next Steps tracking
   - Test project creation and transition workflows
 
+### [006] Idea Management System
+- Started: 2025-03-14
+- Activated: 2025-03-14
+- Status: In progress
+- Description: Creating a structured system for capturing, refining, and tracking ideas
+- Current tasks:
+  - Implement clarification plan for idea management workflow
+  - Develop clear naming conventions and file organization
+  - Create process documentation and example workflows
+
 ## Next Steps
 
 1. Complete Active Project [002] Memory Bank Integration:
